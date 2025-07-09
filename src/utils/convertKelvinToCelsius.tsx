@@ -1,6 +1,4 @@
-import React from 'react'
-
-export function convertKelvinToCelsius(tempInKelvin: number): number {
-  const tempInCelsius = tempInKelvin - 273.15;
-  return Math.floor(tempInCelsius);
+export function convertKelvinToCelsius(kelvin?: number): string {
+  if (kelvin == null || isNaN(kelvin)) return 'N/A';
+  return Math.round(kelvin - 273.15).toString();
 }
